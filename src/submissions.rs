@@ -42,9 +42,9 @@ pub struct Submission {
 }
 
 pub struct SubmissionsQuery {
-    submission_id: Option<i32>,
-    user_id: Option<i32>,
-    problem_id: Option<i32>,
+    pub submission_id: Option<i32>,
+    pub user_id: Option<i32>,
+    pub problem_id: Option<i32>,
 }
 
 impl Default for SubmissionsQuery {
