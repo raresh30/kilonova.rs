@@ -21,7 +21,7 @@ pub struct User {
 }
 
 impl User {
-    pub async fn by_name(name: &str) -> Result<User, Error> {
+    pub async fn from_name(name: &str) -> Result<User, Error> {
         let url = format!("https://kilonova.ro/api/user/byName/{}", name);
         let resp = Response::build(&url).await?;
         match resp {
@@ -33,7 +33,7 @@ impl User {
         }
     }
 
-    pub async fn by_id(id: i32) -> Result<User, Error> {
+    pub async fn from_id(id: i32) -> Result<User, Error> {
         let url = format!("https://kilonova.ro/api/user/byID/{}", id);
         let resp = Response::build(&url).await?;
         match resp {
